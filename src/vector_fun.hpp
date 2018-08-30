@@ -1,23 +1,51 @@
-#ifndef vector_fun_hpp
-#define vector_fun_hpp
+#ifndef VECTOR_FUN_HPP
+#define VECTOR_FUN_HPP
 
+#include <string>
 #include <vector>
-using namespace std;
 
 /*
-Function: add_vec
+Function:
+print_vec
 
-Description: add two scaled vectors:
-vec = x * vec1 + y * vec2.
+Description:
+print a vector.
+*/
+void
+print_vec
+(
+    const std::vector<double> &vec,
+    const std::string vec_name
+);
+
+
+/*
+Function:
+scale_vec
+
+Description:
+scale a vector.
+*/
+std::vector<double>
+scale_vec
+(
+    const std::vector<double> &vec,
+    const double x
+);
+
+/*
+Function: 
+add_vec
+
+Description: 
+add two vectors.
 */
 void
 add_vec
 (
- vector<double> &vec,
- const vector<double> &vec1,
- const vector<double> &vec2,
- const double x,
- const double y
+    std::vector<double> &vec,
+    const std::vector<double> &vec1,
+    const std::vector<double> &vec2
 );
 
 #endif
